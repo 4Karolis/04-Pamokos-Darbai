@@ -336,7 +336,7 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
 
                 switch (pasirinkimas)
                 {
-                    case 1:
+                        case 1:
                         Console.WriteLine($"{num1} + {num2} = {suma}");
                         break;
                     case 2:
@@ -347,6 +347,9 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
                         break;
                     case 4:
                         Console.WriteLine($"{num1} / {num2} = {dalyba}");
+                        break;
+                    default:
+                        Console.WriteLine("Ivestas neteisingas pasirinkimas. Bandykite dar karta");
                         break;
                 }
 
