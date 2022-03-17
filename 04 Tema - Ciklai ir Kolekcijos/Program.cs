@@ -109,8 +109,22 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
             //{
             //    suma += x;
             //}
-            //Console.WriteLine("\nSuma tarp visu jusu ivestu skaicu (imtinai) yra: {0}", suma);
+            ////Console.WriteLine("\nSuma tarp visu jusu ivestu skaicu (imtinai) yra: {0}", suma);
             //Console.WriteLine($"\nVisu skaiciu tarp {pirmas} ir {antras} suma (imtinai) yra: {suma}");//SAME
+
+
+            ////int pirmas = 1;
+            //Console.WriteLine("iveskite antra skaiciu: ");
+            //int antras = int.Parse(Console.ReadLine());
+
+            //int suma = 0;
+
+            //for (int i = 1; i <= antras; i++)
+            //{
+            //    suma += i;
+            //}
+            ////Console.WriteLine("\nSuma tarp visu jusu ivestu skaicu (imtinai) yra: {0}", suma);
+            //Console.WriteLine($"\nVisu skaiciu tarp 1 ir {antras} suma (imtinai) yra: {suma}");//SAME
 
 
             ////---------------------------------------------------- 2 UZDUOTIS ------------------------------------------------------
@@ -289,81 +303,83 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
 
             //--------------------------------------- 4 UZDUOTI V.4 -------------------------------------------
 
-            for (; ; )
-            {
-                double num1, num2, pasirinkimas;
-                while (true)
-                {
-                    Console.WriteLine("Iveskite pirma skaiciu: ");
-                    if (double.TryParse(Console.ReadLine(), out num1))
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Neteisingai ivestas skaicius. Bandykite dar karta.");
-                    }
-                }
-                while (true)
-                {
-                    Console.WriteLine("Iveskite antra skaiciu: ");
-                    if (double.TryParse(Console.ReadLine(), out num2))
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Neteisingai ivestas skaicius. Bandykite dar karta.");
-                    }
-                }
-                while (true)
-                {
-                    Console.WriteLine("Pasirinkite koki veiksma norite atlikti: \n1 - Sudetis; 2 - Atimtis; 3 - Daugyba; 4 - Dalyba;");
-                    if (double.TryParse(Console.ReadLine(), out pasirinkimas))
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Neteisingai ivestas skaicius. Bandykite dar karta.");
-                    }
-                }
+            //for (; ; )
+            //{
+            //    double num1, num2, pasirinkimas;
+            //    while (true)
+            //    {
+            //        Console.WriteLine("Iveskite pirma skaiciu: ");
+            //        if (double.TryParse(Console.ReadLine(), out num1))
+            //        {
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Neteisingai ivestas skaicius. Bandykite dar karta.");
+            //        }
+            //    }
+            //    while (true)
+            //    {
+            //        Console.WriteLine("Iveskite antra skaiciu: ");
+            //        if (double.TryParse(Console.ReadLine(), out num2))
+            //        {
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Neteisingai ivestas skaicius. Bandykite dar karta.");
+            //        }
+            //    }
+            //    while (true)
+            //    {
+            //        Console.WriteLine("Pasirinkite koki veiksma norite atlikti: \n1 - Sudetis; 2 - Atimtis; 3 - Daugyba; 4 - Dalyba;");
+            //        if (double.TryParse(Console.ReadLine(), out pasirinkimas))
+            //        {
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Neteisingai ivestas skaicius. Bandykite dar karta.");
+            //        }
+            //    }
 
-                double suma = num1 + num2;
-                double atimtis = num1 - num2;
-                double daugyba = num1 * num2;
-                double dalyba = num1 / num2;
+            //    switch (pasirinkimas)
+            //    {
+            //        case 1:
+            //            double suma = num1 + num2;
+            //            Console.WriteLine($"{num1} + {num2} = {suma}");
+            //            break;
+            //        case 2:
+            //            double atimtis = num1 - num2;
 
-                switch (pasirinkimas)
-                {
-                        case 1:
-                        Console.WriteLine($"{num1} + {num2} = {suma}");
-                        break;
-                    case 2:
-                        Console.WriteLine($"{num1} - {num2} = {atimtis}");
-                        break;
-                    case 3:
-                        Console.WriteLine($"{num1} * {num2} = {daugyba}");
-                        break;
-                    case 4:
-                        Console.WriteLine($"{num1} / {num2} = {dalyba}");
-                        break;
-                    default:
-                        Console.WriteLine("Ivestas neteisingas pasirinkimas. Bandykite dar karta");
-                        break;
-                }
+            //            Console.WriteLine($"{num1} - {num2} = {atimtis}");
+            //            break;
+            //        case 3:
+            //            double daugyba = num1 * num2;
 
-                Console.WriteLine("Noredami testi spauskite 't', noredami iseiti is programos spauskite 'ENTER' arba bet kuri kita mygtuka");
-                string testi = Console.ReadLine();
-                //testi.Equals((testi), StringComparison.OrdinalIgnoreCase); Console.ReadLine();
-                bool valid = testi == "t" || testi == "T";
-                if (!valid)
-                {
-                    Console.WriteLine("Aciu kad naudojates musu paslaugomis. Iki kito karto!");
-                    break;
-                }
+            //            Console.WriteLine($"{num1} * {num2} = {daugyba}");
+            //            break;
+            //        case 4:
+            //            double dalyba = num1 / num2;
 
-            }
+            //            Console.WriteLine($"{num1} / {num2} = {dalyba}");
+            //            break;
+            //        default:
+            //            Console.WriteLine("Ivestas neteisingas pasirinkimas. Bandykite dar karta");
+            //            break;
+            //    }
+
+            //    Console.WriteLine("Noredami testi spauskite 't', noredami iseiti is programos spauskite 'ENTER' arba bet kuri kita mygtuka");
+            //    string testi = Console.ReadLine();
+            //    testi.Equals((testi), StringComparison.OrdinalIgnoreCase); Console.ReadLine();
+            //    bool valid = testi == "t" || testi == "T";
+            //    if (!valid)
+            //    {
+            //        Console.WriteLine("Aciu kad naudojates musu paslaugomis. Iki kito karto!");
+            //        break;
+            //    }
+
+            //}
             //-------------------------------------------------------------------------------------------------------------------------------
         }
     }
