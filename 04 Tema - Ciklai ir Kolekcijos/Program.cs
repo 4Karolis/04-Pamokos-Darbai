@@ -381,6 +381,67 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
 
             //}
             //-------------------------------------------------------------------------------------------------------------------------------
+
+            #region KOLEKCIJOS
+
+            string[] savaitesDienos =
+            {
+                "Pirmadienis",
+                "Antradienis",
+                "Treciadienis",
+                "Ketvirtadienis",
+                "Penbnktadienis",
+                "Sestadienis",
+                "Sekmadienis",
+            };
+            for (int i = 0; i < savaitesDienos.Length; i++)
+            {
+                Console.WriteLine(savaitesDienos[i]);
+            }
+
+            int[] integers = { 1, 5, 6 };
+
+            string pirmadienis = savaitesDienos[0];
+            Console.WriteLine("Kuria savaites diena parodyti?");
+            Console.WriteLine("Pirmadienis  - 1 ir t.t.");
+
+            int index = int.Parse(Console.ReadLine());
+            string selectedDay = savaitesDienos[index - 1];
+
+            Console.WriteLine($"Buvo pasirinkta savaites diena:{selectedDay} ");
+
+            // Elemento keitimas masyve 
+            Console.WriteLine("Pries:");
+
+            foreach (var diena in savaitesDienos)
+            {
+                Console.WriteLine(diena);
+            }
+
+            savaitesDienos[2] = "TRECIADIENIS";
+
+            Console.WriteLine("Po: ");
+            foreach(var diena in savaitesDienos)
+            {
+                Console.WriteLine(diena);
+            }
+
+            // Masyvo uzpildymas random skaiciais
+            int[] skaiciai  = new int[10];
+            string[] t = new string[10];
+
+            Random random = new Random();
+
+            for (int i = 0; i < skaiciai.Length; i++)
+            {
+                skaiciai[i] = random.Next(1, 100);// generuo 10 random skaiciu, verte nuo 1 iki 100
+            }
+            foreach (var skaicius in skaiciai)
+            {
+                Console.WriteLine(skaicius);
+            }
+
+            #endregion
         }
     }
 }
