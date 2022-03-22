@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace _04_Tema___Ciklai_ir_Kolekcijos
 {
@@ -649,75 +651,238 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
 
             //--------------------------------------------------- 6 uzduotis --------------------------------------------------------
 
-            char[] zodis = new char[6];
+            //char[] zodis = new char[6];
 
-            zodis[0] = 'K';
-            zodis[1] = 'u';
-            zodis[2] = 'r';
-            zodis[3] = 's';
-            zodis[4] = 'a';
-            zodis[5] = 's';
+            //zodis[0] = 'K';
+            //zodis[1] = 'u';
+            //zodis[2] = 'r';
+            //zodis[3] = 's';
+            //zodis[4] = 'a';
+            //zodis[5] = 's';
 
-            Console.WriteLine("Array versija pries isimant simboli: ");
-            Console.WriteLine(zodis);
+            //Console.WriteLine("Array versija pries isimant simboli: ");
+            //Console.WriteLine(zodis);
 
-            char[] naujasZodis = new char[zodis.Length - 1];
+            //char[] naujasZodis = new char[zodis.Length - 1];
 
-            int m = 0;
-            int n = 0;
-            int removeAt = 4; // irasom kuri index is array isimsim
+            //int m = 0;
+            //int n = 0;
+            //int removeAt = 4; // irasom kuri index is array isimsim
 
-            while (m < zodis.Length)
-            {
-                if (m != removeAt)
-                {
-                    naujasZodis[n] = zodis[m];
-                    n++;
-                }
-                m++;
-            }
+            //while (m < zodis.Length)
+            //{
+            //    if (m != removeAt)
+            //    {
+            //        naujasZodis[n] = zodis[m];
+            //        n++;
+            //    }
+            //    m++;
+            //}
 
-            Console.WriteLine("\nNaujas isvestas zodis: ");
-            Console.WriteLine(naujasZodis); // isvedam gautas zodi
+            //Console.WriteLine("\nNaujas isvestas zodis: ");
+            //Console.WriteLine(naujasZodis); // isvedam gautas zodi
 
             #endregion
 
             #region LIST<T> TEORIJA
 
-            List<string> listas = new List<string>();
-            //Listo pildymas
-            listas.Add("Jonas");
-            listas.Add("Petras");
-            listas.Add("Juozas");
+            //List<string> listas = new List<string>();
+            ////Listo pildymas
+            //listas.Add("Jonas");
+            //listas.Add("Petras");
+            //listas.Add("Juozas");
 
-            //Kitas budas papildyt lista
-            List<string> listas2 = new List<string> { "Jonas", "Petras", "Juozas" };
+            ////Kitas budas papildyt lista
+            //List<string> listas2 = new List<string> { "Jonas", "Petras", "Juozas" };
 
-            //isvedimui naudoja FOREACH arba FOR (naudojamt COUNT vietoj .Lenght)
-            for (int i = 0; i < listas.Count; i++)
-            {
-                Console.WriteLine(listas[i]);
-            }
-            foreach (var item in listas)
-            {
-                Console.WriteLine(item);
-            }
+            ////isvedimui naudoja FOREACH arba FOR (naudojamt COUNT vietoj .Lenght)
+            //for (int i = 0; i < listas.Count; i++)
+            //{
+            //    Console.WriteLine(listas[i]);
+            //}
+            //foreach (var item in listas)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            listas.RemoveAt(5);//removina 5 itema
-            listas.Insert(5, "Onute");
-            listas.AddRange(listas2); // concatina abu listus.
-            bool isContains = listas.Contains("Petras");
-            //listas.REadonly nebeleidzia pridet nieko
-            int indexas = listas.LastIndexOf("Patras");
+            //listas.RemoveAt(5);//removina 5 itema
+            //listas.Insert(5, "Onute");
+            //listas.AddRange(listas2); // concatina abu listus.
+            //bool isContains = listas.Contains("Petras");
+            ////listas.REadonly nebeleidzia pridet nieko
+            //int indexas = listas.LastIndexOf("Patras");
 
-            List<int> intList = new List<int>();
-            List<bool> boolList = new List<bool>();
-            List<object> objektlistas = new List<object>();//priima bet kokius tipus, bet uzsiknisi isimant info is ten
+            //List<int> intList = new List<int>();
+            //List<bool> boolList = new List<bool>();
+            //List<object> objektlistas = new List<object>();//priima bet kokius tipus, bet uzsiknisi isimant info is ten
 
-            objektlistas.Add(true);
-            objektlistas.Add("true");
+            //objektlistas.Add(true);
+            //objektlistas.Add("true");
 
-            boolList.Add(true);
+            //boolList.Add(true);
+
+            #endregion
+            //--------------------------------------------------------------------------------------------------------------
+
+            #region UZDUOTYS
+
+            //oreder bind rusiavimui galima naudot 2 uzduotis arba sort
+            // 4 switch naudot arba else if
+
+            //-------------------------------------------------------- 1 UZDUOTIS -----------------------------------------
+
+            //List<int> randomNumbers = new List<int>();
+            //Random random = new Random();
+            //List<int> lyginiai = new List<int>();
+            //List<int> nelyginiai = new List<int>();
+
+            //Console.WriteLine("Programa sukurs atsitiktiniu skaiciu sarasa.");
+
+            //for (int i = 0; i < 11; i++)
+            //{
+            //    randomNumbers.Add(random.Next(1, 100));
+            //    if (randomNumbers[i] % 2 == 0) 
+            //    {
+            //        Console.WriteLine($"Skaicius {randomNumbers[i]} yra lyginis");
+            //        lyginiai.Add(randomNumbers[i]);
+            //    }
+            //    else if (randomNumbers[i] % 2 != 0)
+            //    {
+            //        Console.WriteLine($"Skaicius {randomNumbers[i]} yra neyginis");
+            //        nelyginiai.Add(randomNumbers[i]);
+            //    }
+            //}
+            //Console.WriteLine($"\nLyginiai skaiciai yra: ");
+            //foreach (var skaicius in lyginiai)
+            //{
+            //    Console.WriteLine(skaicius);
+            //}
+
+            //---------------------------------------------- 2 UZDUOTIS ------------------------------------------------------
+
+            //List<string> studentai1 = new List<string>();
+            //studentai1.Add("Kestas");
+            //studentai1.Add("ALgis");
+            //studentai1.Add("Jadvyga");
+
+            //List<string> studentai2 = new List<string>();
+            //studentai2.Add("Antanas");
+            //studentai2.Add("Zenius");
+            //studentai2.Add("Albinas");
+
+            //Console.WriteLine("Studentu sarasas: ");
+            //foreach (var studentas1 in studentai1)
+            //{
+            //    Console.WriteLine(studentas1);
+            //}
+
+            //Console.WriteLine("\nVeliau atvykusiu studentu sarasas: ");
+            //foreach (var studentas2 in studentai2)
+            //{
+            //    Console.WriteLine(studentas2);
+            //}
+
+            //studentai1.AddRange(studentai2);
+            //studentai1.Sort();
+
+            //Console.WriteLine("\nBendras studentu sarasas: ");
+
+            //foreach (var item in studentai1)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //---------------------------------------------- 3 UZDUOTIS ----------------------------------------------------------
+
+            //List<string> vardai = new List<string> { "Obeliksas, Gedgaudas, Cezaris, Konsteblis, Volode" };
+            ////vardai.Add("Obeliksas");
+            ////vardai.Add("Gedgaudas");
+            ////vardai.Add("Cezaris");
+            ////vardai.Add("Konsteblis");
+            ////vardai.Add("Volode");
+
+            //Console.WriteLine("Vardai is saraso: ");
+            //foreach (var item in vardai)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine("\nPridedam prie saraso Napoleonas ir Asteriksas");
+            //vardai.Add("Napoleonas");
+            //vardai.Add("Asteriksas");
+
+            //Console.WriteLine("Papildytas vardu sarasas: ");
+            ////Console.WriteLine("\n");
+            //foreach (var item in vardai)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.WriteLine("\nIs saraso pasalinam trecia varda (Cezaris). Atnuajintas sarasas:");
+            //vardai.RemoveAt(2);
+            //foreach (var item in vardai)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.WriteLine("\nVietoj Nappoleono pridedam Kleopatra. Atnaujintas sarasas: ");
+            //vardai = vardai.Select(x => x.Replace("Napoleonas", "Kleopatra")).ToList();
+            //foreach (var item in vardai)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //---------------------------------------------------------- 4 UZDUOTIS -------------------------------------------
+
+            //List<int> pazymiai = new List<int> { 4, 7, 9, 8, 5, 10, 6 };
+
+            //Console.WriteLine("Pazymiu sarasas: ");
+            //foreach (var item in pazymiai)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.WriteLine("Pasirinkite ka norite daryti su sarasu? 0 - papildyti, 1 - istrinti, 2 - iterpti, 3 - parodyti vidurki, 4 - iseiti is programos:");
+            //int input1 = int.Parse(Console.ReadLine());
+
+            //switch (input1)
+            //{
+            //    case 0:
+            //     Console.WriteLine("Iveskite pazymi: ");
+            //        int input2 = int.Parse(Console.ReadLine());
+            //        pazymiai.Add(input2);
+            //        Console.WriteLine("Atnaujintas pazymiu sarasas: ");
+            //        foreach (var item in pazymiai)
+            //        {
+            //            Console.WriteLine(item);
+            //        }
+            //        break;
+
+            //    case 1:
+            //        Console.WriteLine("Kuri pazymi norite istrinti?");
+            //        int input3 = int.Parse(Console.ReadLine() -1);
+            //        pazymiai.remove
+            //        break;
+            //    default:
+            //        Console.WriteLine("Nesupratau uzduoties.");
+            //        break;
+            //}
+
+            // 8 UZD
+            //List<string> countries = new List<string>();
+            //using (StreamReader countriesFile = new StreamReader("countries.txt"))
+            //{
+            //    string readline;
+            //    while ();
+            //    {
+
+            //    }
+
+            //}
+            #endregion
+
+            #region METODAI (funkcijos) TEORIJA
+
+
 
             #endregion
         }
