@@ -833,39 +833,63 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
 
             //---------------------------------------------------------- 4 UZDUOTIS -------------------------------------------
 
-            //List<int> pazymiai = new List<int> { 4, 7, 9, 8, 5, 10, 6 };
+            List<int> pazymiai = new List<int> { 4, 7, 9, 8, 5, 10, 6};
 
-            //Console.WriteLine("Pazymiu sarasas: ");
-            //foreach (var item in pazymiai)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            Console.WriteLine("Pazymiu sarasas: ");
+            foreach (var item in pazymiai)
+            {
+                Console.WriteLine(item);
+            }
 
-            //Console.WriteLine("Pasirinkite ka norite daryti su sarasu? 0 - papildyti, 1 - istrinti, 2 - iterpti, 3 - parodyti vidurki, 4 - iseiti is programos:");
-            //int input1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Pasirinkite ka norite daryti su sarasu? 0 - papildyti, 1 - istrinti, 2 - iterpti, 3 - parodyti vidurki, 4 - iseiti is programos:");
+            int input = int.Parse(Console.ReadLine());
 
-            //switch (input1)
-            //{
-            //    case 0:
-            //     Console.WriteLine("Iveskite pazymi: ");
-            //        int input2 = int.Parse(Console.ReadLine());
-            //        pazymiai.Add(input2);
-            //        Console.WriteLine("Atnaujintas pazymiu sarasas: ");
-            //        foreach (var item in pazymiai)
-            //        {
-            //            Console.WriteLine(item);
-            //        }
-            //        break;
+            switch (input)
+            {
+                case 0:
+                    Console.WriteLine("Iveskite pazymi: ");
+                    int input1 = int.Parse(Console.ReadLine());
+                    pazymiai.Add(input1);
+                    Console.WriteLine("Atnaujintas pazymiu sarasas: ");
+                    foreach (var item in pazymiai)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    break;
 
-            //    case 1:
-            //        Console.WriteLine("Kuri pazymi norite istrinti?");
-            //        int input3 = int.Parse(Console.ReadLine() -1);
-            //        pazymiai.remove
-            //        break;
-            //    default:
-            //        Console.WriteLine("Nesupratau uzduoties.");
-            //        break;
-            //}
+                case 1:
+                    Console.WriteLine("Kuri pazymi norite istrinti?");
+                    int input2 = int.Parse(Console.ReadLine());
+                    pazymiai.RemoveAt(input2 - 1);
+                    Console.WriteLine("Atnaujintas pazymiu sarasas: ");
+                    foreach (var item in pazymiai)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    break;
+                case 2:
+                    Console.WriteLine("Iveskite, i kuria vieta norite iterpti pazimy:");
+                    int input3 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Iveskite pazymi, kuri norite iterpti:");
+                    int input4 = int.Parse(Console.ReadLine());
+                    pazymiai.Insert(input3 - 1, input4);
+                    Console.WriteLine("Atnaujintas pazymiu sarasas: ");
+                    foreach (var item in pazymiai)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    break;
+                case 3:                    
+                    double vidurkis = (int)pazymiai.Average();
+                    Console.WriteLine($"Pazymiu vidurkis: {vidurkis}");
+                    break;
+                case 4:
+                    Console.WriteLine("Iki!");
+                    break;
+                default:
+                    Console.WriteLine("Nesupratau uzduoties.");
+                    break;
+            }
 
             // 8 UZD
             //List<string> countries = new List<string>();
@@ -878,6 +902,18 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
             //    }
 
             //}
+
+            //------------------------------------------- 5 UZDUOTIS --------------------------------
+
+            //List<int> s1 = new List<int> {1, 2, 4, 8, 16};
+            //List<int> s2 = new List<int> {2, 4, 8};
+
+            ////bool tiesa = s1.Contains(s2);
+            //bool tiesa = s1.All(i => s2.Contains(i));
+            //Console.WriteLine(tiesa);
+
+
+
             #endregion
 
             #region METODAI (funkcijos) TEORIJA
