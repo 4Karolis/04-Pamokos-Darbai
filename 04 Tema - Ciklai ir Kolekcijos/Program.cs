@@ -794,12 +794,12 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
 
             //---------------------------------------------- 3 UZDUOTIS ----------------------------------------------------------
 
-            //List<string> vardai = new List<string> { "Obeliksas, Gedgaudas, Cezaris, Konsteblis, Volode" };
-            ////vardai.Add("Obeliksas");
-            ////vardai.Add("Gedgaudas");
-            ////vardai.Add("Cezaris");
-            ////vardai.Add("Konsteblis");
-            ////vardai.Add("Volode");
+            //List<string> vardai = new List<string>(); //{ "Obeliksas, Gedgaudas, Cezaris, Konsteblis, Volode" };
+            //vardai.Add("Obeliksas");
+            //vardai.Add("Gedgaudas");
+            //vardai.Add("Cezaris");
+            //vardai.Add("Konsteblis");
+            //vardai.Add("Volode");
 
             //Console.WriteLine("Vardai is saraso: ");
             //foreach (var item in vardai)
@@ -811,7 +811,6 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
             //vardai.Add("Asteriksas");
 
             //Console.WriteLine("Papildytas vardu sarasas: ");
-            ////Console.WriteLine("\n");
             //foreach (var item in vardai)
             //{
             //    Console.WriteLine(item);
@@ -831,96 +830,167 @@ namespace _04_Tema___Ciklai_ir_Kolekcijos
             //    Console.WriteLine(item);
             //}
 
+            //////Kitas sprendimas pakeist Napoleona i Kleopatra:
+            ////for (int i = 0; i < vardai.Count; i++)
+            ////{
+            ////    if(vardai[i] == "Napoleonas")
+            ////    {
+            ////        vardai[i] = "Kleopatra";
+            ////    }
+            ////}
+            ////foreach (var item in vardai)
+            ////{
+            ////    Console.WriteLine(item);
+            ////}
+
             //---------------------------------------------------------- 4 UZDUOTIS -------------------------------------------
 
-            List<int> pazymiai = new List<int> { 4, 7, 9, 8, 5, 10, 6};
+            //List<int> pazymiai = new List<int> { 4, 7, 9, 8, 5, 10, 6};
 
-            Console.WriteLine("Pazymiu sarasas: ");
-            foreach (var item in pazymiai)
+            //Console.WriteLine("Pazymiu sarasas: ");
+            //foreach (var item in pazymiai)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            // Console.WriteLine("Pasirinkite ka norite daryti su sarasu: \n0 - papildyti, 1 - istrinti, 2 - iterpti, 3 - parodyti vidurki, 4 - iseiti is programos:");
+            // int input = int.Parse(Console.ReadLine());
+
+            // switch (input)
+            // {
+            //    case 0:
+            //         Console.WriteLine("Iveskite pazymi: ");
+            //         int input1 = int.Parse(Console.ReadLine());
+            //         pazymiai.Add(input1);
+            //         Console.WriteLine("Atnaujintas pazymiu sarasas: ");
+            //         foreach (var item in pazymiai)
+            //         {
+            //             Console.WriteLine(item);
+            //         }
+            //         break;
+
+            //     case 1:
+            //         Console.WriteLine("Kuri pazymi norite istrinti?");
+            //         int input2 = int.Parse(Console.ReadLine());
+            //         pazymiai.RemoveAt(input2 - 1);
+            //         Console.WriteLine("Atnaujintas pazymiu sarasas: ");
+            //         foreach (var item in pazymiai)
+            //         {
+            //             Console.WriteLine(item);
+            //         }
+            //         break;
+            //     case 2:
+            //        Console.WriteLine("Iveskite, i kuria vieta norite iterpti pazimy:");
+            //         int input3 = int.Parse(Console.ReadLine());
+            //         Console.WriteLine("Iveskite pazymi, kuri norite iterpti:");
+            //         int input4 = int.Parse(Console.ReadLine());
+            //         pazymiai.Insert(input3 - 1, input4);
+            //         Console.WriteLine("Atnaujintas pazymiu sarasas: ");
+            //         foreach (var item in pazymiai)
+            //         {
+            //             Console.WriteLine(item);
+            //         }
+            //         break;
+            //     case 3:
+            //         double vidurkis = (int)pazymiai.Average();
+            //         Console.WriteLine($"Pazymiu vidurkis: {vidurkis}");
+            //         break;
+            //     case 4:
+            //         Console.WriteLine("Iki!");
+            //         break;
+            //     default:
+            //         Console.WriteLine("Nesupratau uzduoties.");
+            //         break;
+            // }
+
+            //------------------------------------------- 5 UZDUOTIS --------------------------------
+
+            //List<int> s1 = new List<int> { 1, 2, 4, 8, 16 };
+            //List<int> s2 = new List<int> { 2, 4, 8 };
+
+            ////sukurta sutampanciu skaiciu skaiciuokle
+            //int sutampantysSkaiciai = 0;
+            ////iteruojam 1 sarasa (pradedam nuo 0 indekso)
+            //for (int i = 0; i < s1.Count; i++)
+            //{        // iteruodami pirma sarasa iskart pradedam iteruoti ir antra (pirmo 0 index ir antro 0 index)
+            //         // paskui kelaiuja 1 - 0 index ir 2 - 1 index ir taip visus is eiles
+            //    for (int j = 0; j < s2.Count; j++)
+            //    {      //palyginam ar iteruojant abu sarasus is eiles skaicius sutampa
+            //        if (s1[i] == s2[j])
+            //        {   //jei sutampa, pridedam prie sutampanciu saraso ir einam toliau
+            //            sutampantysSkaiciai++;
+            //        }
+            //    }
+            //}
+            //// per bool patikrinam ar sutampantys skaiciai atitinka antro saraso ilgi
+            //bool tiesa = sutampantysSkaiciai == s2.Count;
+
+            //// jei atitinka, tada sutampa
+            //if(tiesa)
+            //{
+            //    Console.WriteLine($"Sarasas 2 yra saraso 1 dalimi: {tiesa}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"Sarasas 2 yra saraso 1 dalimi: {tiesa}");
+            //}
+
+            //------------------------------------------ 7 UZDUOTIS ----------------------------------
+
+            //List<int> sarasiux = new List<int>();
+            //Random random = new Random();
+
+            //Console.WriteLine("Kuriamas 100 000 skaiciu sarasas.");
+            ////Iteruojam 100 000 kartu, sarasa pildom random skaiciais, verte nuo 1 iki 100
+            //for (int i = 0; i < 100000000; i++)
+            //{
+            //    sarasiux.Add(random.Next(1, 100));
+            //}
+
+            //var watch = System.Diagnostics.Stopwatch.StartNew();
+            //watch.Stop();
+            //var praejoLaiko = watch.ElapsedMilliseconds;
+            //Console.WriteLine($"100 000 skaiciu sarasas sukurtas. Tai uztruko {praejoLaiko}MS");
+
+            //------------------------------------------ 8 UZDUOTIS ----------------------------------
+
+            List<string> countries = new List<string>();
+            //galima ir nurodyt failo PATH: (rasant patch reik vietoj \ det dvigubus \\.
+            //string path = "C:\\Users\\MP Dental\\Documents\\GitHub\\04 - Pamokos - Darbai\\04 Tema - Ciklai ir Kolekcijos\\bin\\Debug\\netcoreapp3.1";
+
+
+            string destinationPath = "C:\\Users\\MP Dental\\Documents\\GitHub\\04-Pamokos-Darbai\\04 Tema - Ciklai ir Kolekcijos\\countries_sorted.txt";
+            using (StreamReader countriesFile = new StreamReader("countries.txt"))
+            //Tada nurodom ne failo pavadinima, o path:
+            //using (StreamReader countriesFile = new StreamReader(path))
+            {
+                string readLine;
+
+                while ((readLine = countriesFile.ReadLine()) != null)
+                {
+                    countries.Add(readLine);
+                }
+            }
+            foreach (string item in countries)
             {
                 Console.WriteLine(item);
             }
 
-            Console.WriteLine("Pasirinkite ka norite daryti su sarasu? 0 - papildyti, 1 - istrinti, 2 - iterpti, 3 - parodyti vidurki, 4 - iseiti is programos:");
-            int input = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Is viso saliu: {countries.Count}");
+            //using (StreamWriter sw = File.CreateText("countries_sorted.txt")) ;
+            
 
-            switch (input)
-            {
-                case 0:
-                    Console.WriteLine("Iveskite pazymi: ");
-                    int input1 = int.Parse(Console.ReadLine());
-                    pazymiai.Add(input1);
-                    Console.WriteLine("Atnaujintas pazymiu sarasas: ");
-                    foreach (var item in pazymiai)
-                    {
-                        Console.WriteLine(item);
-                    }
-                    break;
+            countries.Sort();
 
-                case 1:
-                    Console.WriteLine("Kuri pazymi norite istrinti?");
-                    int input2 = int.Parse(Console.ReadLine());
-                    pazymiai.RemoveAt(input2 - 1);
-                    Console.WriteLine("Atnaujintas pazymiu sarasas: ");
-                    foreach (var item in pazymiai)
-                    {
-                        Console.WriteLine(item);
-                    }
-                    break;
-                case 2:
-                    Console.WriteLine("Iveskite, i kuria vieta norite iterpti pazimy:");
-                    int input3 = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Iveskite pazymi, kuri norite iterpti:");
-                    int input4 = int.Parse(Console.ReadLine());
-                    pazymiai.Insert(input3 - 1, input4);
-                    Console.WriteLine("Atnaujintas pazymiu sarasas: ");
-                    foreach (var item in pazymiai)
-                    {
-                        Console.WriteLine(item);
-                    }
-                    break;
-                case 3:                    
-                    double vidurkis = (int)pazymiai.Average();
-                    Console.WriteLine($"Pazymiu vidurkis: {vidurkis}");
-                    break;
-                case 4:
-                    Console.WriteLine("Iki!");
-                    break;
-                default:
-                    Console.WriteLine("Nesupratau uzduoties.");
-                    break;
-            }
+            using (StreamWriter sw = File.CreateText(destinationPath)) ;
 
-            // 8 UZD
-            //List<string> countries = new List<string>();
-            //using (StreamReader countriesFile = new StreamReader("countries.txt"))
-            //{
-            //    string readline;
-            //    while ();
-            //    {
-
-            //    }
-
-            //}
-
-            //------------------------------------------- 5 UZDUOTIS --------------------------------
-
-            //List<int> s1 = new List<int> {1, 2, 4, 8, 16};
-            //List<int> s2 = new List<int> {2, 4, 8};
-
-            ////bool tiesa = s1.Contains(s2);
-            //bool tiesa = s1.All(i => s2.Contains(i));
-            //Console.WriteLine(tiesa);
+            File.WriteAllLines(destinationPath, countries);
 
 
 
             #endregion
 
-            #region METODAI (funkcijos) TEORIJA
-
-
-
-            #endregion
         }
     }
 }
